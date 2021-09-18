@@ -15,5 +15,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          echo {{ github.event.inputs.version }}
-          echo {{ github.event.inputs.version }}
+          echo ${{ github.event.inputs.version }}
+          echo ${{ github.event.inputs.version }}

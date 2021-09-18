@@ -1,0 +1,19 @@
+name: Create Release
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "The release version"
+        required: true
+
+      notes:
+        description: "The notes for this release"
+        required: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo {{ github.event.inputs.version }}
+          echo {{ github.event.inputs.version }}

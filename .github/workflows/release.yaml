@@ -28,10 +28,6 @@ jobs:
         with: 
           version: ${{ github.event.inputs.version }}
 
-  commit-changes:
-    runs-on: ubuntu-latest
-    needs: update-changelog
-    steps:
       - name: Log In with Github Actions
         run: |
           git config user.name "GitHub actions"

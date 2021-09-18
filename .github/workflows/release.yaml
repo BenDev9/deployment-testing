@@ -41,10 +41,9 @@ jobs:
           git push
           
       - name: Create Tag
-        uses: laputansoft/github-tag-action@v4.6
+      - uses: rickstaa/action-create-tag@v1
         with:
-          github_token: ${{ env.github-token }}
-          version: ${{ github.event.inputs.version }}
+          tag: "latest"
           
 
   create-release:

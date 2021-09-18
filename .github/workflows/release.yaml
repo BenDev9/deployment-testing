@@ -56,7 +56,7 @@ jobs:
         shell: python
         run: |
           import keepachangelog
-          chlog = iter(keepachangelog.to_raw_dict("CHANGELOG.md"))
+          chlog = keepachangelog.to_raw_dict("CHANGELOG.md")
           f = open("notes.txt", "w")
           f.write(chlog[list(chlog.keys())[0]]["raw"])
           f.close()

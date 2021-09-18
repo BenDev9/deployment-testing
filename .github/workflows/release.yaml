@@ -45,6 +45,9 @@ jobs:
         with:
           tag: "latest"
           
+      - name: Check tag
+        run: git tag -n
+          
 
   create-release:
     runs-on: ubuntu-latest

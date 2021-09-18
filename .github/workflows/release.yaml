@@ -39,7 +39,7 @@ jobs:
           git add somefile.txt
           git tag ${{ github.event.inputs.version }}
           git commit --message "Create release ${{ github.event.inputs.version }}"
-          git push
+          git push --tags
 
   create-release:
     runs-on: ubuntu-latest

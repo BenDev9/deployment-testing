@@ -16,4 +16,4 @@ jobs:
     steps:
       - run: |
           echo ${{ github.event.inputs.version }}
-          echo ${{ github.event.inputs.version }}
+          echo ${{ github.event.inputs.description }}

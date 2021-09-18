@@ -41,7 +41,7 @@ jobs:
 
   create-release:
     runs-on: ubuntu-latest
-    needs: [test, update-changelog]
+    needs: [update-changelog]
     steps:
       - name: Check out repo
         uses: actions/checkout@v2

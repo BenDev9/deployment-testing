@@ -34,7 +34,7 @@ jobs:
         run: |
           import time
           f = open("somefile.txt", "w")
-          f.write(time.time())
+          f.write(str(time.time()))
           f.close()
 
       - name: Commit Build

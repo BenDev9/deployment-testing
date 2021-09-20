@@ -30,6 +30,5 @@ jobs:
           f.close()
       - name: Release
         uses: softprops/action-gh-release@v1
-        if: startsWith(github.ref, 'refs/tags/')
         with: 
           body_path: notes.txt

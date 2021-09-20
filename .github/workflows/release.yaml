@@ -32,8 +32,9 @@ jobs:
       - name: Build application
         shell: python
         run: |
+          import time
           f = open("somefile.txt", "w")
-          f.write("text")
+          f.write(time.time())
           f.close()
 
       - name: Commit Build

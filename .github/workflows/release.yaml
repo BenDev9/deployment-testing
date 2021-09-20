@@ -70,7 +70,7 @@ jobs:
          f.write(text)
          f.close()
       - name: Create release    
-      - uses: ncipollo/release-action@v1
+        uses: ncipollo/release-action@v1
         with:
          artifacts: "notes.txt"
          bodyFile: "notes.txt"

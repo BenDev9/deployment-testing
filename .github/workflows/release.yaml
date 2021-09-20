@@ -39,12 +39,7 @@ jobs:
           git add somefile.txt
           git tag ${{ github.event.inputs.version }}
           git commit --message "Create release ${{ github.event.inputs.version }}"
-          git push
-          
-      - name: Create Tag
-        uses: rickstaa/action-create-tag@v1
-        with:
-          tag: "${{ github.event.inputs.version }}"
+          git push --atomic origin main ${{ github.event.inputs.version }}
           
       - name: Check tag
         run: git tag -n

@@ -1,0 +1,35 @@
+name: Publish (Automatic helper)
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+      
+jobs:
+  create-release:
+    runs-on: ubuntu-latest
+    needs: [update-files]
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v2
+
+      - name: Install python packages
+        run: |
+          pip install keepachangelog
+      - name: Gather patch notes
+        shell: python
+        run: |
+          import keepachangelog
+          chlog = keepachangelog.to_raw_dict("CHANGELOG.md")
+          print(chlog)
+          notes = chlog[list(chlog.keys())[0]]
+          print(notes)
+          text = notes['raw']
+          print(text)
+          f = open("notes.txt", "w")
+          f.write(text)
+          f.close()
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with: 
+          body_path: notes.txt

@@ -59,7 +59,8 @@ jobs:
           print(chlog)
           notes = chlog[list(chlog.keys())[0]]
           print(notes)
-          text = notes['raw']
+          try: text = notes['raw']
+          except: text = ""
           print(text)
           f = open("notes.txt", "w")
           f.write(text)

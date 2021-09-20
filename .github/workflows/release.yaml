@@ -30,17 +30,18 @@ jobs:
           git push
 
       - name: Build application
+        shell: python
         run: |
-          echo I totaly did something
+          f = open("somefile.txt", "w")
+          f.write("text")
+          f.close()
 
       - name: Commit Build
-        run:
-          echo test >> somefile.txt
+        run: |
           git add somefile.txt
           git tag ${{ github.event.inputs.version }}
           git commit --message "Create release ${{ github.event.inputs.version }}"
-          git push
-          git push --tags
+          git push --atomic origin main ${{ github.event.inputs.version }}
           
       - name: Check tag
         run: git tag -n

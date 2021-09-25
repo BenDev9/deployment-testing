@@ -7,9 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-- notes
-- some new notes
-- als;kdfj
+## [v1.0.6] - 2021-09-25
+
+-   notes
+-   some new notes
+-   als;kdfj
 
 ## [v1.0.5] - 2021-09-25
 
@@ -28,7 +30,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   another one
 -   and another
 
-[Unreleased]: https://github.com/BenDev9/deployment-testing/compare/v1.0.5...HEAD
+[Unreleased]: https://github.com/BenDev9/deployment-testing/compare/v1.0.6...HEAD
+
+[v1.0.6]: https://github.com/BenDev9/deployment-testing/compare/v1.0.5...v1.0.6
 
 [v1.0.5]: https://github.com/BenDev9/deployment-testing/compare/v1.0.2...v1.0.5
 

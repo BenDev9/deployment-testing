@@ -1,0 +1,9 @@
+name: Publish (Automatic)
+on:
+  push:
+    tags:
+      - "v*"
+      
+jobs:
+  - name: Test thing
+    run: echo test

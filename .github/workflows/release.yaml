@@ -50,6 +50,7 @@ jobs:
   create-release:
     runs-on: ubuntu-latest
     needs: [update-files]
+    if: false
     steps:
       - name: Check out repo
         uses: actions/checkout@v2

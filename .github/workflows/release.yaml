@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Check out repo
         uses: actions/checkout@v1
+        with:
+          token: ${{ secrets.PAT }}
 
       - name: Update changelog
         uses: thomaseizinger/keep-a-changelog-new-release@v1

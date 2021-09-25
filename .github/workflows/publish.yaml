@@ -5,5 +5,8 @@ on:
       - "v*"
       
 jobs:
-  - name: Test thing
-    run: echo test
+  testing:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test thing
+        run: echo test

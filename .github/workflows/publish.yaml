@@ -31,5 +31,5 @@ jobs:
       - name: Create release    
         uses: ncipollo/release-action@v1
         with:
-         artifacts: "/builds/*.vsix"
+         artifacts: "./builds/*"
          bodyFile: "notes.txt"

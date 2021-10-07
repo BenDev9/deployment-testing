@@ -21,7 +21,7 @@ jobs:
       - name: Install node packages
         run: |
           npm install
-          npm install vsce
+          npm install -g vsce
 
       - name: Update changelog
         uses: thomaseizinger/keep-a-changelog-new-release@v1

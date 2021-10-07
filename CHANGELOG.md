@@ -1,4 +1,5 @@
 <!-- markdownlint-disable -->
+
 # Changelog
 
 All notable changes to this project will be documented in this file.
@@ -8,7 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-- hopefuly the last one here
+## [v1.0.8] - 2021-10-07
+
+-   hopefuly the last one here
 
 ## [v1.0.7] - 2021-09-25
 
@@ -43,7 +46,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   another one
 -   and another
 
-[Unreleased]: https://github.com/BenDev9/deployment-testing/compare/v1.0.7...HEAD
+[Unreleased]: https://github.com/BenDev9/deployment-testing/compare/v1.0.8...HEAD
+
+[v1.0.8]: https://github.com/BenDev9/deployment-testing/compare/v1.0.7...v1.0.8
 
 [v1.0.7]: https://github.com/BenDev9/deployment-testing/compare/v1.0.6...v1.0.7
 

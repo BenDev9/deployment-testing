@@ -40,7 +40,10 @@ jobs:
           git push
 
       - name: Build application
-        run: vsce package -o ./builds/
+        run: |
+          if [[ -d ./builds/ ]]; then rm -rf ./builds/;fi
+          mkdir ./builds/
+          vsce package -o ./builds/
 
       - name: Commit Build
         run: |

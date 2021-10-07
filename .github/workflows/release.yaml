@@ -40,7 +40,7 @@ jobs:
           git push
 
       - name: Build application
-        run: vscu package -o ./builds/
+        run: vsce package -o ./builds/
 
       - name: Commit Build
         run: |

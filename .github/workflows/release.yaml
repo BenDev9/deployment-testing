@@ -47,7 +47,7 @@ jobs:
 
       - name: Commit Build
         run: |
-          git add somefile.txt
+          git add ./builds/
           git commit --message "Create release ${{ github.event.inputs.version }}"
           git tag ${{ github.event.inputs.version }}
           git push --atomic origin main ${{ github.event.inputs.version }}

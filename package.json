@@ -1,0 +1,130 @@
+{
+	"name": "replit-vscode",
+	"displayName": "replit-vscode",
+	"description": "An extension to integrate similar functionality to replit-cli",
+	"version": "0.0.1",
+	"publisher": "BenDev9",
+	"engines": {
+		"vscode": "^1.34.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"*"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "replit-vscode.pull",
+				"title": "Replit: Pull",
+				"icon": "$(arrow-down)"
+			},
+			{
+				"command": "replit-vscode.push",
+				"title": "Replit: Push",
+				"icon": "$(arrow-up)"
+			},
+			{
+				"command": "replit-vscode.clone",
+				"title": "Replit: Clone a Repl",
+				"icon": "$(cloud-download)"
+			},
+			{
+				"command": "replit-vscode.openRepl",
+				"title": "Replit: Open a repl",
+				"shortTitle": "Open",
+				"icon": "$(folder-opened)"
+			},
+			{
+				"command": "replit-vscode.deleteRepl",
+				"title": "Replit: Delete a repl",
+				"shortTitle": "Delete",
+				"icon": "$(trash)"
+			},
+			{
+				"command": "replit-vscode.refreshRepls",
+				"title": "Replit: Refresh local repl pane",
+				"icon": "$(sync)"
+			},
+			{
+				"command": "extension.debug",
+				"title": "Debug"
+			}
+		],
+		"menus": {
+			"editor/title": [
+				{
+					"command": "replit-vscode.pull",
+					"group": "navigation"
+				},
+				{
+					"command": "replit-vscode.push",
+					"group": "navigation"
+				}
+			],
+			"view/title": [
+				{
+					"command": "replit-vscode.clone",
+					"group": "navigation",
+					"when": "view == repls"
+				},
+				{
+					"command": "replit-vscode.refreshRepls",
+					"group": "navigation",
+					"when": "view == repls"
+				}
+			],
+			"view/item/context": [
+				{
+					"command": "replit-vscode.openRepl",
+					"group": "inline",
+					"when": "view == repls"
+				},
+				{
+					"command": "replit-vscode.deleteRepl",
+					"group": "inline",
+					"when": "view == repls"
+				}
+			]
+		},
+		"viewsContainers": {
+			"activitybar": [
+				{
+					"id": "workspaces",
+					"title": "Replit",
+					"icon": "/assets/panelIcon.svg"
+				}
+			]
+		},
+		"views": {
+			"workspaces": [
+				{
+					"id": "repls",
+					"name": "Local Repls"
+				}
+			]
+		},
+		"viewsWelcome": [
+			{
+				"view": "repls",
+				"contents": "No local repls were found\n[Clone a repl](command:replit-vscode.clone)"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./"
+	},
+	"devDependencies": {
+		"@types/node": "^12.12.0",
+		"@types/vscode": "^1.34.0",
+		"typescript": "^4.2.2"
+	},
+	"dependencies": {
+		"adm-zip": "^0.5.6",
+		"request": "^2.88.2"
+	}
+}

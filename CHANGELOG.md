@@ -9,7 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-- ugh
+## [v1.0.11] - 2021-10-07
+
+-   ugh
 
 ## [v1.0.10] - 2021-10-07
 
@@ -56,7 +58,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   another one
 -   and another
 
-[Unreleased]: https://github.com/BenDev9/deployment-testing/compare/v1.0.10...HEAD
+[Unreleased]: https://github.com/BenDev9/deployment-testing/compare/v1.0.11...HEAD
+
+[v1.0.11]: https://github.com/BenDev9/deployment-testing/compare/v1.0.10...v1.0.11
 
 [v1.0.10]: https://github.com/BenDev9/deployment-testing/compare/v1.0.9...v1.0.10
 
